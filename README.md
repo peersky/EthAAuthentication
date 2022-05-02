@@ -2,7 +2,7 @@
 
 ## This tool helps to generate accesss tokens for moonstream.to
 
-token is stored as bas64 encoded stringifiyed object of following interface:
+token is stored as bas64 encoded string of an object of following interface:
 
 ```ts
 interface TokenInterface {
