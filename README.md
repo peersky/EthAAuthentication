@@ -2,7 +2,7 @@
 
 ## This tool helps to generate accesss tokens for moonstream.to
 
-token is stored as bas64 encoded string of an object of following interface:
+token is stored as base64 encoded string of an object of following interface:
 
 ```ts
 interface TokenInterface {
@@ -11,6 +11,7 @@ interface TokenInterface {
   signed_message: string;
 }
 ```
+
 Deadline is stored as number (in seconds).
 
 usage:
@@ -19,8 +20,6 @@ usage:
 ```js
 import { signAccessToken, parseToken, isOutdated } from "@peersky/web3auth";
 ```
-
-
 
 Generate access token:
 
