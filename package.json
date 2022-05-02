@@ -1,6 +1,6 @@
 {
-  "name": "@bugout-dev/web3auth",
-  "version": "0.0.1",
+  "name": "@peersky/web3auth",
+  "version": "0.0.2",
   "description": "Signing messages for authentication in moonstream",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

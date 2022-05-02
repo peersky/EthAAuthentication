@@ -5,7 +5,7 @@ interface TokenInterface {
   signed_message: string;
 }
 
-async function signAccessToken(
+export async function signAccessToken(
   account: string,
   provider: any,
   duration: number
@@ -72,7 +72,7 @@ async function signAccessToken(
   return retval;
 }
 
-function parseToken(token: string) {
+export function parseToken(token: string) {
   const stringToken = Buffer.from(token, "base64").toString("ascii");
   const objectToken: TokenInterface =
     stringToken !== ""
@@ -80,4 +80,10 @@ function parseToken(token: string) {
       : { address: null, deadline: null, signed_message: null };
 
   return objectToken;
+}
+
+export function isOutdated(deadline: number | string) {
+  if (!deadline) return true;
+  if (Number(deadline) <= Math.floor(new Date().getTime() / 1000)) return true;
+  return false;
 }
