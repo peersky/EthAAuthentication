@@ -20,7 +20,7 @@ const _getSignature = async () => {
 Read data conained in token:
 
 ```js
-const objectToken = parseToken(localStorage.getItem("APP_ACCESS_TOKEN") ?? "");
+const objectToken = parseToken(token);
 ```
 
 parseToken returns:
