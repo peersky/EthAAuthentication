@@ -14,6 +14,7 @@ Generate access token:
 ```js
 const _getSignature = async () => {
   const token = await signAccessToken(account, window.ethereum, 60 * 60 * 24);
+  // Do stuff..
 };
 ```
 
