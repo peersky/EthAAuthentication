@@ -2,6 +2,17 @@
 
 ## This tool helps to generate accesss tokens for moonstream.to
 
+token is stored as bas64 encoded stringifiyed object of following interface:
+
+```ts
+interface TokenInterface {
+  address: string;
+  deadline: number;
+  signed_message: string;
+}
+```
+Deadline is stored as number (in seconds).
+
 usage:
 `yarn add @peersky/web3auth`
 
@@ -9,11 +20,13 @@ usage:
 import { signAccessToken, parseToken, isOutdated } from "@peersky/web3auth";
 ```
 
+
+
 Generate access token:
 
 ```js
 const _getSignature = async () => {
-  const token = await signAccessToken(account, window.ethereum, 60 * 60 * 24);
+  const token = await signAccessToken(address, window.ethereum, 60 * 60 * 24);
   // Do stuff..
 };
 ```
@@ -22,16 +35,6 @@ Read data conained in token:
 
 ```js
 const objectToken = parseToken(token);
-```
-
-parseToken returns:
-
-```ts
-interface TokenInterface {
-  address: string;
-  deadline: number;
-  signed_message: string;
-}
 ```
 
 check if deadline expired:
