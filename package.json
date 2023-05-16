@@ -1,13 +1,13 @@
 {
   "name": "@peersky/eth-auth",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Create and verify authentication token signed by an EOA",
   "main": "./lib.commonjs/index.js",
   "module": "./lib.esm/index.js",
   "scripts": {
-    "test": "tsc && mocha",
+    "test": "yarn build-all && mocha ",
     "build": "tsc --project tsconfig.esm.json",
-    "build-all": "npm run build && npm run build-commonjs",
+    "build-all": "yarn run build && yarn run build-commonjs",
     "build-commonjs": "tsc --project tsconfig.commonjs.json"
   },
   "author": "Peersky",
@@ -17,7 +17,7 @@
     "@types/mocha": "^10.0.1",
     "@types/node": "^17.0.31",
     "chai": "^4.3.7",
-    "ethers": "^6.3.0",
+    "ethers": "^5.6.6",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
