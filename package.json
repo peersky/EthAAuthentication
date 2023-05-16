@@ -1,6 +1,6 @@
 {
   "name": "@peersky/eth-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Create and verify authentication token signed by an EOA",
   "main": "dist/index.js",
