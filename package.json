@@ -23,8 +23,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peersky/web3auth.git",
+    "url": "https://github.com/peersky/EthAAuthentication.git",
     "directory": "/"
   },
-  "homepage": "https://github.com/peersky/web3auth/blob/main/README.md"
+  "homepage": "https://github.com/peersky/EthAAuthentication/blob/main/README.md"
 }
