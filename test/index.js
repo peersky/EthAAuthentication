@@ -1,13 +1,13 @@
-import { expect } from "chai";
+// import { expect } from "chai";
+const expect = require("chai").expect;
 // import { describe, it } from "mocha";
-import {
-  validateToken,
-  signAccessToken,
-  isOutdated,
-  parseToken,
-  tryGetAuthenticated,
-} from "../dist/index.js";
-import { ethers } from "ethers";
+const validateToken = require("../lib.commonjs/index").validateToken;
+const signAccessToken = require("../lib.commonjs/index").signAccessToken;
+const isOutdated = require("../lib.commonjs/index").isOutdated;
+const parseToken = require("../lib.commonjs/index").parseToken;
+const tryGetAuthenticated =
+  require("../lib.commonjs/index").tryGetAuthenticated;
+const ethers = require("ethers");
 describe("When signing with default domain", function () {
   it("Should be able to validate signature", async function () {
     const signer = ethers.Wallet.createRandom();

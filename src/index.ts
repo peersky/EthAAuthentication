@@ -1,10 +1,4 @@
-import {
-  HDNodeWallet,
-  JsonRpcSigner,
-  TypedDataDomain,
-  Wallet,
-  ethers,
-} from "ethers";
+import { TypedDataDomain, Wallet, ethers } from "ethers";
 
 const types = {
   EOAAuth: [
@@ -37,7 +31,7 @@ interface TokenInterface {
  * @return {Promise<string>} base64 encoded token
  */
 export async function signAccessToken(
-  signer: Wallet | JsonRpcSigner | HDNodeWallet,
+  signer: Wallet | ethers.providers.JsonRpcSigner,
   duration: number,
   domain: TypedDataDomain = {
     name: defaultName,
@@ -49,7 +43,7 @@ export async function signAccessToken(
     deadline: Math.floor(new Date().getTime() / 1000) + duration,
   };
 
-  const _s = await signer.signTypedData(domain, types, message);
+  const _s = await signer._signTypedData(domain, types, message);
 
   const retval = Buffer.from(
     JSON.stringify({
@@ -108,7 +102,7 @@ export function validateToken(
     return false;
   }
 
-  const signerAddress = ethers.verifyTypedData(
+  const signerAddress = ethers.utils.verifyTypedData(
     domain,
     types,
     {
