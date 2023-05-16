@@ -1,16 +1,30 @@
 {
-  "name": "@peersky/web3auth",
-  "version": "0.0.2",
-  "description": "Signing messages for authentication in moonstream",
+  "name": "@peersky/eth-auth",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Create and verify authentication token signed by an EOA",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsc && mocha",
     "build": "tsc"
   },
-  "author": "bugout-dev",
-  "license": "ISC",
+  "author": "Peersky",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^17.0.31"
-  }
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^17.0.31",
+    "chai": "^4.3.7",
+    "ethers": "^6.3.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peersky/web3auth.git",
+    "directory": "/"
+  },
+  "homepage": "https://github.com/peersky/web3auth/blob/main/README.md"
 }
