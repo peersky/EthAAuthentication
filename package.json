@@ -1,6 +1,6 @@
 {
   "name": "@peersky/eth-auth",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Create and verify authentication token signed by an EOA",
   "main": "./lib.commonjs/index.js",
   "module": "./lib.esm/index.js",
@@ -13,10 +13,12 @@
   "author": "Peersky",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "@types/node": "^17.0.31",
     "chai": "^4.3.7",
+    "changeset": "^0.2.6",
     "ethers": "^5.6.6",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
