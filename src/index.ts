@@ -133,4 +133,5 @@ export default {
   isOutdated,
   parseToken,
   signAccessToken,
+  tryGetAuthenticated,
 };
